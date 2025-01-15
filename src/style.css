@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+}
+
+#calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 320px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: right;
+    color: #2c3e50;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.operator {
+    background: rgba(52, 152, 219, 0.9);
+    color: white;
+}
+
+.operator:hover {
+    background: rgba(52, 152, 219, 1);
+}
+
+#equals {
+    background: rgba(46, 204, 113, 0.9);
+    color: white;
+}
+
+#equals:hover {
+    background: rgba(46, 204, 113, 1);
+}
+
+#clear {
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+}
+
+#clear:hover {
+    background: rgba(231, 76, 60, 1);
+}
+
+/* Make the calculator responsive */
+@media (max-width: 360px) {
+    #calculator {
+        width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    #display {
+        height: 50px;
+        font-size: 20px;
+    }
+}
